@@ -1,0 +1,58 @@
+.navbar{
+
+    background-color: transparent;
+  
+    height:60px;
+    display:flex;
+    width:100vw;
+    justify-content: center;
+    font-weight:700;
+position: fixed;
+transition: transform 1000ms;
+z-index:100;
+}
+.navbar.move{
+   
+    background-color: #050505c9;
+  }
+
+
+.navLink{
+color: white;
+font-size: 2rem;
+display: flex;
+align-items: center;
+text-decoration: none;
+justify-content: center;
+cursor:pointer;
+
+
+}
+.navIcon{
+    display:flex;
+    position:absolute;
+    top:0;
+    left:0;
+    cursor: pointer;
+    transform: translate(100%,50%);
+    font-weight:bold;
+    font-size:2rem;
+    color:white;
+    
+}
+
+.navIcon:hover{
+    color:rgba(59, 155, 179, 0.993);
+    
+}
+
+.logo_name:hover{
+    color:rgba(59, 155, 179, 0.993);
+    text-shadow: black;
+    cursor:pointer;
+    
+}
+.logo_name{
+    font-size:2rem;
+    color:white;
+}

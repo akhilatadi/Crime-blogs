@@ -1,38 +1,281 @@
 .App {
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #252a2c;
   min-height: 100vh;
+  max-height: max-content;
+  width: 100%;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.5rem;
+
+  flex: 0.5;
+}
+
+.home {
+  flex: 0.7;
+  justify-content: space-evenly;
+}
+
+a {
+  color: rgb(235, 242, 245);
+  text-decoration: none;
+  margin: 10px;
+  font-size: 25px;
+  font-family: "Source Serif Pro", serif;
+
+  font-weight: 500;
+}
+
+/* 
+creatpost.css starts here
+  
+*/
+
+.createPostPage {
+  width: 100%;
+  height: calc(130vh - 80px);
+  display: grid;
+  place-items: center;
+}
+.cpContainer {
+  width: 65%;
+  height: auto;
+  padding: 20px;
+  background-color: rgb(7, 56, 8 8);
+  border-radius: 12px;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.cpContainer h1 {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-top: 2rem;
+}
+
+.cpContainer label {
+  font-size: 1.5rem;
+}
+.cpContainer .inputGp {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGp input,
+.imageGp input,
+.inputGp textarea {
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.inputGp input {
+  height: 40px;
+}
+.inputGp textarea {
+  height: 150px;
+}
+
+.cpContainer button {
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+input,
+textarea {
+  margin-top: 5px;
+}
+.link {
+  font-size: medium;
+  margin-left: 5px;
+  margin-right: 5px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* 
+creatpost.css  ends here
+  
+*/
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 40px 0 20px;
+
+  align-items: center;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.like {
+  cursor: pointer;
+}
+.imageCt {
+  text-align: center;
+  height: 220px;
+}
+.image {
+  height: 200px;
+
+  width: cover;
+}
+.loginPage {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/login.jpg");
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.loginPage p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* GOOGLE BUTTOn */
+.login-with-google-btn {
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 5px 16px 12px 42px;
+  border: 3px ;
+  border-radius: 5px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.534), 0 1px 1px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+background-color: rgba(10, 10, 10, 0.589);
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+  transition: all 0.5s ease-in-out;
+  
+}
+.login-with-google-btn:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+  background-color:white;
+  color:grey;
+  transform:scale(1.05);
+}
+
+.login-with-google-btn:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+/* 
+post.css  starts here
+  
+*/
+
+.postsPage {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/policee.jpg");
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background-attachment: fixed;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.postsPage .post {
+  width: 70%;
+  height: auto;
+  max-height: 400px;
+  background: rgba(105, 166, 182, 0.733); /* fallback for old browsers */
+
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+
+  min-height: 200px;
+}
+
+.postsPage .post::-webkit-scrollbar {
+  width: 12px;
+}
+
+.postsPage .post::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+}
+.post .postHeader {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.postHeader .title {
+  flex: 95%;
+  text-align: center;
+  margin-left: 40px;
+  font-size: 15px;
+  color: white;
+}
+.postHeader .deletePost {
+  flex: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.deletePost button {
+  border: none;
+  color: white;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.post .postTextContainer {
+  word-wrap: break-word;
+  height: auto;
+  text-align: left;
+  width: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.searchBar {
+  margin: 5rem;
+  width: 200px;
+  height: 23px;
 }

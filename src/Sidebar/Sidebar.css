@@ -1,0 +1,115 @@
+.sideContainer{
+    position:fixed;
+    z-index:100;
+    width:280px;
+    height:100%;
+    background:#0c0c0ce0;
+    display:grid;
+    align-items: center;
+    justify-content:center;
+    top:0;
+    transition:left 0.5s ease-in-out;
+    left:-500px;
+    }
+    .sideContainer.show{
+    left:0;
+    }
+    
+    .close{
+    position:absolute;
+    top:1.2rem;
+    right:1.5rem;
+    background:transparent;
+    border:transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+    outline:none;
+    transition:all 0.3s ease-in;
+    color:white
+    
+    }
+    
+    .close:hover{
+    transform:scale(1.1);
+    color:rgba(59, 155, 179, 0.993);
+    }
+    
+    .side_menu{
+    display:flex;
+    flex-direction:column;
+   
+    text-align: center;
+  width:100%;
+  height:40vh;
+ margin-bottom:6rem;
+    justify-content:space-between;
+
+  
+  
+  
+    
+    }
+    
+    .side_wrapper{
+   
+        height:30vh;
+      
+        display:flex;
+        flex-direction: column;
+        justify-content:space-between;
+        place-items: center;
+        align-items:center;
+    }
+    .side_link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration: none;
+    place-items: center;;
+    list-style:none;
+    transition: 0.2s ease-in-out;
+ 
+    width:100%;
+    color:#fdfdfd;
+   
+    cursor:pointer;
+    transition:all 0.3s ease-in;
+    }
+    .side_link:hover{
+       color:  rgba(59, 155, 179, 0.993);
+transform: scale(1.1);
+    
+    }
+   
+    
+    
+
+    
+
+    
+    
+
+
+    @media(max-width:480px){
+        .sideMenu{
+            grid-template-rows: repeat(4, 60px);
+            width: 100%;
+    
+        }
+    }
+    .logout{
+        padding:0.5rem 1rem;
+        background-color:transparent;
+        color:white;
+        font-size:1rem;
+        border-radius:5px;
+        border: solid 5px rgba(59, 155, 179, 0.993);
+        transition:all 0.3s ease-in-out;
+        margin-top:2rem;
+    }
+
+    .logout:hover{
+        cursor: pointer;
+        transform:scale(1.1);
+        background-color:rgba(59, 155, 179, 0.993);
+    }
