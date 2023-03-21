@@ -7,10 +7,10 @@ import {
   getDocs,
   updateDoc,
 } from "firebase/firestore";
-import { db, auth } from "./firebase";
-import { useNavigate } from "react-router-dom";
+import { db} from "./firebase";
+import { Link, useNavigate } from "react-router-dom";
 
-function Posts({ isAuth}) {
+function Posts() {
   const [searchTerm, setSearchTerm] = useState("");
   const [postLists, setPostLists] = useState([]);
  
@@ -49,6 +49,8 @@ function Posts({ isAuth}) {
           setSearchTerm(e.target.value);
         }}
       ></input>
+
+    <button className="add"><Link  to="/createpost">Add salad recipe</Link></button>
       {postLists
         .filter((post) =>
           post.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -65,30 +67,31 @@ function Posts({ isAuth}) {
                 
 
                 <div className="deletePost">
-                  {isAuth && post.author.id === auth.currentUser.uid && (
+                
                     <button
                       onClick={() => {
                         deletePost(post.id);
                       }}
                     >
-                      &#128465;
+                     <h6>Delete</h6> 
                     </button>
-                  )}
+                  
+              
                 </div>
               </div>
               <div className="postCt">
                 <div className="imageCt">
-                  <img className="image" src={post.image}></img>{" "}
+                  <img className="image" src={post.image}></img>
                 </div>
-                <div className="postTextContainer">{post.post}</div>
-              </div>
-              <br></br>
-              <div style={{color:"white"}}>
-                Listen Now :
+                <div style={{color:"grey"}}>
                 <a className="link" href={post.link} target="_blank">
-                  {post.link}
+                  Open PDF Here
                 </a>
               </div>
+              </div>
+              <div className="postTextContainer">{post.post}</div>
+              <br></br>
+             
               <div className="footer">
                 <div
                   className="like"
@@ -98,7 +101,6 @@ function Posts({ isAuth}) {
                 >
                   🤍{post.like}
                 </div>
-                <h3>posted by:{post.author.name}</h3>
               </div>
             </div>
           );

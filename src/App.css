@@ -45,6 +45,9 @@ creatpost.css starts here
   height: calc(130vh - 80px);
   display: grid;
   place-items: center;
+  background: linear-gradient(to top, rgba(125, 123, 123, 0.6), rgba(163, 159, 159, 0.6)),
+    url("./images/Mandys-Salad4.jpg");
+  
 }
 .cpContainer {
   width: 65%;
@@ -104,7 +107,7 @@ textarea {
   font-size: medium;
   margin-left: 5px;
   margin-right: 5px;
-  color: white;
+  color: rgb(65, 63, 63);
 }
 
 /* 
@@ -125,9 +128,18 @@ creatpost.css  ends here
 .like {
   cursor: pointer;
 }
+.postCt{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items: center;
+  
+
+}
 .imageCt {
   text-align: center;
-  height: 220px;
+  height: auto;
+  padding-right: 20px;
 }
 .image {
   height: 200px;
@@ -136,7 +148,7 @@ creatpost.css  ends here
 }
 .loginPage {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./images/login.jpg");
+    url("./images/mandy.jpg");
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -193,8 +205,8 @@ post.css  starts here
 */
 
 .postsPage {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./images/policee.jpg");
+  background: linear-gradient(to bottom, rgba(165, 163, 163, 0.6), rgba(188, 180, 180, 0.6)),
+    url("./images/Mandys-Salad5.jpg");
   width: 100%;
   min-height: calc(100vh - 80px);
   height: auto;
@@ -209,10 +221,10 @@ post.css  starts here
 }
 
 .postsPage .post {
-  width: 70%;
+  width: 90%;
   height: auto;
   max-height: 400px;
-  background: rgba(105, 166, 182, 0.733); /* fallback for old browsers */
+  background: rgba(235, 218, 228, 0.733); /* fallback for old browsers */
 
   box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
   margin: 20px;
@@ -235,7 +247,7 @@ post.css  starts here
 .post .postHeader {
   display: flex;
   flex-direction: row;
-
+height:auto;
   width: 100%;
 }
 
@@ -244,7 +256,7 @@ post.css  starts here
   text-align: center;
   margin-left: 40px;
   font-size: 15px;
-  color: white;
+  color: rgb(52, 51, 51);
 }
 .postHeader .deletePost {
   flex: 5%;
@@ -255,7 +267,7 @@ post.css  starts here
 
 .deletePost button {
   border: none;
-  color: white;
+  color: rgb(75, 74, 74);
   background: none;
   font-size: 30px;
   cursor: pointer;
@@ -278,4 +290,18 @@ post.css  starts here
   margin: 5rem;
   width: 200px;
   height: 23px;
+}
+.add{
+  padding:0.5rem 1rem;
+  background-color:rgba(59, 155, 179, 0.993);
+  color:white;
+  font-size:1rem;
+  border-radius:5px;
+  border: solid 5px rgba(59, 155, 179, 0.993);
+  transition:all 0.3s ease-in-out;
+}
+.add:hover{
+  cursor: pointer;
+  transform:scale(1);
+  background-color:rgba(59, 155, 179, 0.993);
 }

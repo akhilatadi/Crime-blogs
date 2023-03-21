@@ -24,7 +24,7 @@ return;
     <nav>
       <div className={`navbar ${move ? 'move' : ''}`} >
         <Link to="/" className="navLink">
-          <div className="logo_name">Crime Blogs</div>
+          <div className="logo_name">Mandy Salad Blogs</div>
         </Link>
 
 

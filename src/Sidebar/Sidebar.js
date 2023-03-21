@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import { Link } from "react-router-dom";
 
 
-const Sidebar = ({ toggle, show, isAuth, signUserOut }) => {
+const Sidebar = ({ toggle, show }) => {
  
   
   
@@ -18,7 +18,7 @@ const Sidebar = ({ toggle, show, isAuth, signUserOut }) => {
       
     
         
-      {isAuth && <Link className="side_link" onClick={()=>toggle()} to="/createpost">CreatePost</Link>}
+     <Link className="side_link" onClick={()=>toggle()} to="/createpost">Create Post</Link>
 
 
       <Link className="side_link" onClick={()=>toggle()} to="/">Home</Link>
@@ -27,16 +27,7 @@ const Sidebar = ({ toggle, show, isAuth, signUserOut }) => {
         </Link>
        
 
-        {!isAuth ? (
-            <Link className="side_link" to="/login" onClick={()=>toggle()}>Login</Link>
-          ) : (
-           
-            <button className="logout"  onClick={signUserOut}>
-              Log Out
-            </button>
-          
-          )}
-       
+
 
        
       </div>
