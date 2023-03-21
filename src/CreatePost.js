@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { addDoc, collection, updateDoc,doc } from "firebase/firestore";
-import { db, auth } from "./firebase";
+import { db } from "./firebase";
 import {useNavigate} from "react-router-dom";
 
 
-function CreatePost({isAuth,edit, setEdit}) {
+function CreatePost({edit, setEdit}) {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const[image, setImage] = useState("");
@@ -19,18 +19,13 @@ function CreatePost({isAuth,edit, setEdit}) {
       post,
       image,
       link,
-      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
+    
     });
     
 navigate("/posts");
   };
 
 
-  useEffect(()=>{
-    if(!isAuth){
-      navigate("/login");
-    }
-  },[]);
   
 
  
